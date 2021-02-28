@@ -17,10 +17,13 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
     
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp_v13",{
+/*mongoose.connect("mongodb://localhost:27017/yelp_camp_v13",{
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false
+});*/
+mongoose.connect("mongodb+srv://our-first-user:johncenaad@cluster1.ll4kp.mongodb.net/our-first-user?retryWrites=true&w=majority",{
+	useNewUrlParser: true
 });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
